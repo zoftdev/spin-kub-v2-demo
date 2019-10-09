@@ -5,7 +5,7 @@ metadata:
   namespace: default
 data:
   NEW_FEATURE: "true"
-  Test: "v1"
+  Test: "v2"
 
 ---
 #123
