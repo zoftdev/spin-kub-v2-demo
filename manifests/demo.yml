@@ -65,3 +65,24 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8000
+    
+    
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: spinnaker-demo
+  namespace: default
+  labels:
+    app: spinnaker-demo
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+  - host: spinnaker-demo.spinnaker.arctic.true.th
+    http:
+      paths:
+      - backend:
+          serviceName: spinnaker-demo
+          servicePort: 80
+        path: /    
