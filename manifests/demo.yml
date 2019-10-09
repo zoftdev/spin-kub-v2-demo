@@ -42,6 +42,13 @@ spec:
         envFrom:
         - configMapRef:
             name: spinnaker-demo-config
+        resources:
+          requests:
+            memory: 300Mi
+            cpu: 200m
+          limits:
+            memory: 300Mi
+            
 
 ---
 
